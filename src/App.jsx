@@ -25,13 +25,13 @@ const THEMES = {
 const ITINERARY = {
   '04-14': { date: '4/14', weekday: '週二', items: [{ name: "高雄小港 (KHH)", time: "06:55", type: "transport", note: "CI164 前往仁川", address: "高雄市小港區中山四路2號" }, { name: "仁川機場 (ICN)", time: "10:45", type: "transport", note: "入境後包車前往弘大", address: "인천광역시 중구 공항로 271" }, { name: "T-Luggage 弘大", time: "12:30", type: "service", note: "寄放行李", address: "서울특별시 마포구 양화로 188" }, { name: "風川鰻魚", time: "13:30", type: "food", note: "弘大 2 號出口步行 400m", address: "서울특별시 마포구 동교로 27길 39" }, { name: "KTX 首爾 → 釜山", time: "19:35", type: "transport", note: "抵達後搭計程車至飯店", address: "서울특별시 용산구 한강대로 405" }] },
   '04-15': { date: '4/15', weekday: '週三', items: [{ name: "甘川洞文化村", time: "10:00", type: "activity", note: "韓服體驗與拍照", address: "부산광역시 사하구 감내2로 203" }, { name: "松島海上纜車", time: "14:00", type: "activity", note: "跨海纜車體驗", address: "부산광역시 서구 송도해변로 171" }, { name: "白淺灘文化村", time: "16:00", type: "activity", note: "影島海景步道", address: "부산 영도구 영선동4가 605-3" }, { name: "姨母家烤貝", time: "18:30", type: "food", note: "影島海鮮特色", address: "부산광역시 영도구 감지해변길 98" }] },
-  '04-16': { date: '4/16', weekday: '週四', items: [{ name: "海雲台鮑魚粥", time: "09:30", type: "food", note: "海邊鮮甜早餐", address: "부산광역시 해운代구 달맞이길62번길 7" }, { name: "膠囊列車 (尾浦)", time: "14:00", type: "activity", note: "需提前預約", address: "부산 해운대구 중동 948-1" }, { name: "味贊王鹽烤肉", time: "18:00", type: "food", note: "海雲台店", address: "부산광역시 해운대구 해운대로608번길 46" }] },
+  '04-16': { date: '4/16', weekday: '週四', items: [{ name: "海雲台鮑魚粥", time: "09:30", type: "food", note: "海邊鮮甜早餐", address: "부산광역시 해운대구 달맞이길62번길 7" }, { name: "膠囊列車 (尾浦)", time: "14:00", type: "activity", note: "需提前預約", address: "부산 해운대구 중동 948-1" }, { name: "味贊王鹽烤肉", time: "18:00", type: "food", note: "海雲台店", address: "부산광역시 해운대구 해운대로608번길 46" }] },
   '04-17': { date: '4/17', weekday: '週五', items: [{ name: "All Sunday Bagels", time: "10:30", type: "food", note: "西面熱門排隊店", address: "부산 부산진구 중앙대로680번길 19" }, { name: "田浦咖啡街", time: "13:30", type: "activity", note: "文青巷弄探索", address: "부산시 부산진구 동성로39번길 28" }, { name: "李在模披薩 (西面)", time: "16:30", type: "food", note: "釜山靈魂披薩", address: "부산 부산진구 전포대로 209번길 21" }] },
-  '04-18': { date: '4/18', weekday: '週六', items: [{ name: "機張末家鮑魚粥", time: "11:30", type: "food", note: "附帶豐富小菜", address: "부산 기장군 기장읍 기장해안로 895" }, { name: "廣安里海灘", time: "16:00", type: "activity", note: "跨海大橋日落", address: "부산 수영구 광안해변로 219" }, { name: "熟成道烤肉", time: "19:00", type: "food", note: "廣安里人氣店", address: "부산 수영구 광안해변로 289" }] },
+  '04-18': { date: '4/18', weekday: '週六', items: [{ name: "機張末家鮑魚粥", time: "11:30", type: "food", note: "附帶豐富小菜", address: "부산 기장군 기장읍 기장해안로 895" }, { name: "廣安里海灘", time: "16:00", type: "activity", note: "跨海大橋日落", address: "부산 수영구 광안해변로 219" }, { name: "熟成道烤肉", time: "19:00", type: "food", note: "廣安里人氣店", address: "부산 수영구 광安해변로 289" }] },
   '04-19': { date: '4/19', weekday: '週日', items: [{ name: "密陽豬肉湯飯", time: "09:00", type: "food", note: "草梁站 1 號出口", address: "부산 동구 중앙대로231번길 5" }, { name: "金海機場 (PUS)", time: "12:30", type: "transport", note: "14:25 起飛回高雄", address: "부산광역시 강서구 공항진입로 108" }] }
 };
 
-const apiKey = "AIzaSyDBgHTvNZ-PWZIBitw_6cz6IhIJMpzCdB4"; 
+const apiKey = "AIzaSyDBgHTvNZ-PWZIBitw_6cz6IhIJMpzCdB4";
 
 const App = () => {
   const [currentThemeKey, setCurrentThemeKey] = useState('classic');
@@ -120,7 +120,6 @@ const App = () => {
 
       <button onClick={() => setModal('translator')} style={{ backgroundColor: theme.accent, color: '#fff' }} className="fixed bottom-6 right-6 p-4 rounded-full shadow-2xl z-30"><Languages size={24} /></button>
 
-      {/* 彈窗部分保持原樣 */}
       {modal === 'expenses' && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-end justify-center">
           <div style={{ backgroundColor: theme.panelBg }} className="w-full max-w-lg rounded-t-[2rem] p-6 h-[85vh] flex flex-col">
